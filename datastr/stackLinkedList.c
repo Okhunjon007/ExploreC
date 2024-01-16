@@ -16,7 +16,7 @@ int createStack(Node **stack)
 
 int push(Node **stack, uint32_t data)
 {
-	Node *tmp=(Node*)malloc(sizeof(Node *));
+	Node *tmp=(Node*)malloc(sizeof(Node));
 	//check for failure of memory allocation
 	tmp->data=data;
 	tmp->next=*stack;
