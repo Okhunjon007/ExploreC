@@ -33,7 +33,7 @@ int pop(Node *stack, uint32_t *data)
 	if(stack->top == -1)
 		return 1;
 	else{
-		data=stack->data[(stack->top)--];
+		(*data)=stack->data[(stack->top)--];
 		return 0;
 	}
 }

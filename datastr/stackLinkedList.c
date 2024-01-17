@@ -30,7 +30,7 @@ int pop(Node **stack, uint32_t *data)
 	if(!tmp)
 		return 1;
 
-	data=tmp->data;
+	(*data)=tmp->data;
 	*stack=tmp->next;
 	free(tmp);
 	return 0;
@@ -71,7 +71,7 @@ int main(int argc,char *argv[])
 	printStackTopDown(&stack);
 	uint32_t i;
 	pop(&stack, &i);
-	printf("after pop\n");
+	printf("after poping %d\n", i);
 	printStackTopDown(&stack);
 	return 0;
 }
